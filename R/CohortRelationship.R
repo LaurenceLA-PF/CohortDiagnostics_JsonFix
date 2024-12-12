@@ -79,6 +79,7 @@ runCohortRelationshipDiagnostics <-
 
     if (is.null(connection)) {
       connection <- DatabaseConnector::connect(connectionDetails)
+      dbGetQuery(connection, "ALTER SESSION SET JDBC_QUERY_RESULT_FORMAT='JSON'")
       on.exit(DatabaseConnector::disconnect(connection))
     }
 
