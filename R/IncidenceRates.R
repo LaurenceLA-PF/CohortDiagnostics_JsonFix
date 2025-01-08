@@ -205,6 +205,7 @@ aggregateIr <- function(ratesSummary, aggregateList) {
 computeIncidenceRates <- function(connection,
                                   tempEmulationSchema,
                                   cdmDatabaseSchema,
+                                  vocabularyDatabaseSchema = cdmDatabaseSchema,
                                   cohortDatabaseSchema,
                                   cohortTable,
                                   databaseId,
