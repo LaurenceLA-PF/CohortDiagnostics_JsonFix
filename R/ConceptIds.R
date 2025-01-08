@@ -52,7 +52,7 @@ exportConceptInformation <- function(connection = NULL,
     tablesInCdmDatabaseSchema[tablesInCdmDatabaseSchema %in% vocabularyTableNames]
 
   if (length(vocabularyTablesInCdmDatabaseSchema) == 0) {
-    stop("Vocabulary tables not found in ", cdmDatabaseSchema)
+    warning("Vocabulary tables not found in ", cdmDatabaseSchema)
   }
   sql <- "SELECT DISTINCT concept_id FROM @unique_concept_id_table;"
   uniqueConceptIds <-
